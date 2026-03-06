@@ -1,3 +1,4 @@
+import 'vitest-browser-react';
 import { setupServer } from 'msw/node';
 import { http, HttpResponse } from 'msw';
 import { afterAll, afterEach, beforeAll } from 'vitest';
