@@ -14,7 +14,7 @@ export default function App() {
             <div>
                 {countriesQuery.data.map((country, i) => {
                     return (
-                        <div key={i} style={{ display: 'grid', gridTemplateColumns: '2rem 1fr 1fr 1fr 1fr' }}>
+                        <div key={i} className='pointer' style={{ display: 'grid', gridTemplateColumns: '2rem 1fr 1fr 1fr 1fr' }}>
                             <div>{country.flag}</div>
                             <div>{country.name.common}</div>
                             <div>{country.population}</div>
