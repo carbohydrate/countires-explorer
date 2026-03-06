@@ -9,7 +9,7 @@ export interface Country {
     capital: string[];
     subregion: string;
     timezones: string[];
-    currencies: Currency[];
+    currencies: Record<string, Currency>;
     languages: Record<string, string>;
     borders: string[];
 }
