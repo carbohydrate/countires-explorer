@@ -4,4 +4,7 @@ export interface Country {
         common: string;
         official: string;
     };
+    population: number;
+    region: string;
+    capital: string[];
 }

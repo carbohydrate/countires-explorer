@@ -11,14 +11,19 @@ export default function App() {
     return (
         <div>
             <h1 style={{ textAlign: 'center' }}>List of Countries</h1>
-            {countriesQuery.data.map((country, i) => {
-                return (
-                    <div key={i}>
-                        <div>{country.flag}</div>
-                        <div>{country.name.common}</div>
-                    </div>
-                );
-            })}
+            <div>
+                {countriesQuery.data.map((country, i) => {
+                    return (
+                        <div key={i} style={{ display: 'grid', gridTemplateColumns: '2rem 1fr 1fr 1fr 1fr' }}>
+                            <div>{country.flag}</div>
+                            <div>{country.name.common}</div>
+                            <div>{country.population}</div>
+                            <div>{country.region}</div>
+                            <div>{country.capital.map(x => x)}</div>
+                        </div>
+                    );
+                })}
+            </div>
         </div>
     );
 }
