@@ -16,7 +16,7 @@ createRoot(document.getElementById('root')!).render(
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<App />} />
-          <Route path='/country/:id' element={<SingleCountry />} />
+          <Route path='/country/:name' element={<SingleCountry />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>

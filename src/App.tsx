@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useCountries } from './api/useCountries';
 import { LoadingComponent } from './components/loading-component';
-import { Country } from './types';
 
 export default function App() {
     const countriesQuery = useCountries();
@@ -17,7 +16,7 @@ export default function App() {
                 {countriesQuery.data.map((country, i) => {
                     return (
                         <Link
-                            to={`/country/${country.name.common}`}
+                            to={`/country/${country.name.common.toLowerCase()}`}
                             key={i}
                             className='pointer no-style-link'
                             style={{ display: 'grid', gridTemplateColumns: '2rem 1fr 1fr 1fr 1fr' }}
