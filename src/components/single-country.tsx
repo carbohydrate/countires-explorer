@@ -1,10 +1,11 @@
 import { type FC } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useCountry } from '../api/useCountry';
 import { LoadingComponent } from './loading-component';
 
 export const SingleCountry: FC = () => {
     const { name } = useParams();
+    const navigate = useNavigate();
 
     if (!name) {
         throw new Error('name is undefined!');
@@ -16,10 +17,15 @@ export const SingleCountry: FC = () => {
         return <LoadingComponent />;
     }
 
+    const goBack = () => {
+        navigate(-1);
+    }
+
     const country = countryQuery.data[0];
 
     return (
         <div>
+            <button onClick={goBack}>Go Back</button>
             <div>{country.flag}</div>
             <div>{country.name.common}</div>
             <div>{country.name.official}</div>
