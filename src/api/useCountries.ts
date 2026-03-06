@@ -10,7 +10,9 @@ export const useCountries = () => {
             const res = await axios.get(REST_COUNTRIES_URL);
 
             return res.data;
-        }
+        },
+        staleTime: Infinity,
+        gcTime: Infinity,
     });
 
     return query;
