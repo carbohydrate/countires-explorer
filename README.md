@@ -19,3 +19,4 @@ I opted to use `@tanstack/react-query` as I'm very familiar with that library.  
 5. filters  
 6. sorting  
 7. better loading indicator  
+8. error handling  
